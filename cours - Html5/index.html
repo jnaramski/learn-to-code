@@ -77,8 +77,56 @@
       </div>
       <div>
         <h6><span>&#128190;</span>video</h6>
-        <video src="./video.mp4" height="300" alt="video cascade" autoplay muted loop></video>
+        <video src="./video.mp4" height="200" alt="video cascade" autoplay muted loop></video>
       </div>
+    </section>
+    <section>
+      <h2>Les formulaires</h2>
+      <form action="">
+        <!-- "for" et "id" -->
+        <label for="name">Name :</label>
+        <input type="text" id="name" placeholder="Name here" />
+
+        <br>
+
+        <label for="age">Age :</label>
+        <input type="number" id="age" placeholder="Age here" />
+
+        <br>
+
+        <!-- select -->
+        <label for="gender">gender</label>
+        <select id="gender">
+          <option value="man">man</option>
+          <option value="woman">woman</option>
+          <option value="other">other</option>
+          <select>
+
+            <!-- input radio -->
+            <div>
+
+              <label for="human">human</label>
+              <input type="radio" name="type" id="human" checked>
+
+              <label for="dog">dog</label>
+              <input type="radio" name="type" id="dog">
+
+              <label for="cat">cat</label>
+              <input type="radio" name="type" id="cat">
+            </div>
+            <textarea placeholder="your text here" cols="30" rows="10"></textarea>
+
+            <br>
+
+            <input type="checkbox" name="" id="cgv" />
+            <label for="cgv">accept</label>
+
+            <br>
+
+            <input type="submit" value="this button" />
+
+      </form>
+      <button>ceci est un bouton</button>
     </section>
   </main>
   <footer></footer>
