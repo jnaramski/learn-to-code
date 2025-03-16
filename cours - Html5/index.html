@@ -12,6 +12,7 @@
 
 <body>
   <nav>
+    <!-- unorder list -->
     <ul>
       <li>Accueil</li>
       <li>Boutiques</li>
@@ -22,14 +23,65 @@
   <header>
     <h1>Titre principal version 2</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium perspiciatis laborum debitis autem illum
-      eaque. Tempore beatae impedit consequuntur cumque labore at tenetur, modi cum reiciendis, architecto quam repellat
+      Lorem, ipsum dolor. <em>texte en italique.</em><strong> texte en gras.</strong>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium perspiciatis laborum debitis autem
+      illum
+      eaque. Tempore beatae impedit consequuntur cumque labore at tenetur, modi cum reiciendis, architecto quam
+      repellat
       laboriosam nisi exercitationem ipsam? Maxime atque velit quidem praesentium itaque magnam quo minus!
-
     </p>
 
   </header>
+  <main>
+    <section>
+      <h2>Ordered List</h2>
+      <ol>
+        <li>Ceci est</li>
+        <li>une liste</li>
+        <li>ordonnée</li>
+      </ol>
+    </section>
+    <section>
+      <h3>image en html</h3>
+      <img src="./Chaton.jpeg" height="200" alt="photo chaton" />
+      <!-- l'Alt de l'image est pour l'accessibilité -->
 
+      <div>
+        <h4>tableau</h4>
+        <table border="4" cellpadding="10" cellspacing="4" style="text-align: center">
+          <thead>
+            <tr>
+              <th>col 1</th>
+              <th>col 2</th>
+              <th>col 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"> cell 1</td>
+              <td>cell 2</td>
+              <td>cell 3</td>
+            </tr>
+            <tr>
+              <td colspan="2">cell 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h5>links</h5>
+        <!-- anchor -->
+        <a href="https://htmlcheatsheet.com" target="_blank"> HTML Cheat Sheet </a>
+      </div>
+      <div>
+        <h6><span>&#128190;</span>video</h6>
+        <video src="./video.mp4" height="300" alt="video cascade" autoplay muted loop></video>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 
 </body>
 
