@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Tektur";
+    src: url(./assets/fonts/Tektur-VariableFont_wdth\,wght.ttf)
+}
+
+
+body {
+    font-family: "Tektur", Verdana;
+    background: url(./assets/img/bg.webp) center/cover;
+    min-height: 100vh;
+
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 10px 4px 6px #d9e00840;
+    color: rgb(1, 25, 22);
+    text-decoration: underline;
+    font-family: "Tektur", sans-serif;
+}
+
+main {
+    min-height: 500px;
+    width: 90%;
+    background: rgba(209, 213, 227, 0.8);
+    /* centrer une boîte */
+    margin: 0 auto;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.flexbox,
+.grid,
+.absolute {
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+/* Flexblox */
+
+.flexbox ul {
+    padding: 0px 0px 0px 50px;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 20px;
+
+}
+
+.grid img {
+    width: 70%;
+
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "i1 i2"
+        "ta ta"
+        "vi bt";
+}
+
+input,
+textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: tektur;
+    height: 40px;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#btn-submit:hover {
+    background: darkblue;
+    color: white;
+}
+
+.absolute {
+    position: relative;
+}
+
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: 0;
+    right: 0;
+
+}
