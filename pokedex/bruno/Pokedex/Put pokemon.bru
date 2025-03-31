@@ -1,0 +1,19 @@
+meta {
+  name: Put pokemon
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/pokemons/12
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "number": 11,
+      "name": "Pikachu",
+      "type": "Electric"
+    }
+}
