@@ -1,0 +1,84 @@
+<div class="container my-4">
+  <h1>{{ title }}</h1>
+
+  <!-- Section d'ajout d'une équipe et d'un Pokémon -->
+  <div class="row">
+    <!-- Ajouter une équipe -->
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>Add a New Team</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="addTeam()">
+            <div class="form-group">
+              <label for="teamName">Team Name</label>
+              <input type="text" id="teamName" class="form-control" [(ngModel)]="newTeam.teamName" name="teamName" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3" [disabled]="!newTeam.teamName">Add Team</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ajouter un Pokémon -->
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>Add a New Pokémon</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="addPokemon()">
+            <div class="form-group">
+              <label for="pokemonName">Pokémon Name</label>
+              <input type="text" id="pokemonName" class="form-control" [(ngModel)]="newPokemon.pokemonName" name="pokemonName" required>
+            </div>
+            <div class="form-group">
+              <label for="pokemonNumber">Pokémon Number</label>
+              <input type="number" id="pokemonNumber" class="form-control" [(ngModel)]="newPokemon.pokemonNumber" name="pokemonNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="pokemonType">Pokémon Type</label>
+              <input type="text" id="pokemonType" class="form-control" [(ngModel)]="newPokemon.pokemonType" name="pokemonType" required>
+            </div>
+            <div class="form-group">
+              <label for="pokemonTeam">Pokémon Team</label>
+              <select id="pokemonTeam" class="form-control" [(ngModel)]="newPokemon.pokemonTeam" name="pokemonTeam" required>
+                <option *ngFor="let team of teams" [ngValue]="team">{{ team.teamName }}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success mt-3" [disabled]="!newPokemon.pokemonName || !newPokemon.pokemonNumber || !newPokemon.pokemonType || !newPokemon.pokemonTeam">Add Pokémon</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Affichage des équipes et des Pokémon -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let team of teams">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h4>{{ team.teamName }}</h4>
+            </div>
+            <div class="card-body">
+              <!-- Afficher les Pokémon dans cette équipe -->
+              <div *ngIf="pokemonsGroupedByTeam[team.teamName] && pokemonsGroupedByTeam[team.teamName].length > 0">
+                <ul class="list-group">
+                  <li *ngFor="let pokemon of pokemonsGroupedByTeam[team.teamName]" class="list-group-item">
+                    <span class="font-weight-bold">#{{ pokemon.pokemonNumber }} - {{ pokemon.pokemonName }} ({{ pokemon.pokemonType }})</span>
+                  </li>
+                </ul>
+              </div>
+              <div *ngIf="!(pokemonsGroupedByTeam[team.teamName] && pokemonsGroupedByTeam[team.teamName].length > 0)">
+                <p>No Pokémon in this team yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
