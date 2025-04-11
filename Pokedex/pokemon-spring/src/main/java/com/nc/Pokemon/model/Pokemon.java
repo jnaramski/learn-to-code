@@ -2,6 +2,9 @@ package com.nc.Pokemon.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -21,6 +24,7 @@ public class Pokemon {
 
     @ManyToOne
     @JoinColumn(name = "team_id")
+    @JsonBackReference
     private PokemonTeam pokemonTeam;
 
     public Pokemon(){

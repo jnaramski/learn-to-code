@@ -1,0 +1,22 @@
+<div class="pokedex-container">
+    <h1 class="title">Pokedex Manager</h1>
+  
+    <!-- Liste des équipes -->
+    <div class="teams-section">
+      <h2>Teams</h2>
+      <div class="teams-grid">
+        <div *ngFor="let team of teams" class="team-card">
+          <div class="team-header">
+            <strong>{{ team.teamName }}</strong>
+          </div>
+          <ul class="pokemons-list">
+            <li *ngFor="let pokemon of team.pokemons" class="pokemon-item">
+              <span class="pokemon-number">#{{ pokemon.pokemonNumber }}</span>
+              <span class="pokemon-name">{{ pokemon.pokemonName }}</span>
+              <span class="pokemon-type">({{ pokemon.pokemonType }})</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

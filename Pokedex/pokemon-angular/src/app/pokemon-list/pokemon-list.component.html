@@ -1,0 +1,24 @@
+<div class="pokemon-list-container">
+    <h1 class="title">All Pokémon</h1>
+  
+    <!-- Liste des Pokémon -->
+    <div class="pokemon-grid">
+      <div *ngFor="let pokemon of allPokemon" class="pokemon-card" (click)="selectPokemon(pokemon)">
+        <div class="pokemon-header">
+          <span class="pokemon-number">#{{ pokemon.pokemonNumber }}</span>
+          <span class="pokemon-name"> {{ pokemon.pokemonName }}</span>
+        </div>
+        <div class="pokemon-type">
+          Type: <span>{{ pokemon.pokemonType }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Détails du Pokémon sélectionné -->
+    <div *ngIf="selectedPokemon" class="pokemon-details">
+      <h2>Details for {{ selectedPokemon.pokemonName }}</h2>
+      <p><strong>Number:</strong> #{{ selectedPokemon.pokemonNumber }}</p>
+      <p><strong>Type:</strong> {{ selectedPokemon.pokemonType }}</p>
+      <button (click)="clearSelection()">Close</button>
+    </div>
+  </div>

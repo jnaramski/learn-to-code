@@ -1,0 +1,26 @@
+/* Navbar styles */
+.navbar {
+    background-color: #007bff; /* Couleur bleue pour la barre */
+    padding: 10px 0; /* Espacement vertical */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    align-items: center; /* Aligne les liens verticalement */
+  }
+  
+  .navbar .nav-link {
+    color: white; /* Couleur blanche pour les liens */
+    text-decoration: none; /* Supprime le soulignement */
+    margin: 0 15px; /* Espacement horizontal entre les liens */
+    font-weight: bold; /* Texte en gras */
+    font-size: 1.1rem; /* Taille de police légèrement augmentée */
+    transition: color 0.3s ease, transform 0.2s ease; /* Effets de transition */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffdd57; /* Couleur jaune au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+  }

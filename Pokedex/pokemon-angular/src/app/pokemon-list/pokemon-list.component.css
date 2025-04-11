@@ -1,0 +1,103 @@
+/* Container styles */
+.pokemon-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Options de tri */
+  .sort-options {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sort-options label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .sort-options select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Pokémon grid */
+  .pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e9f5ff;
+  }
+  
+  .pokemon-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pokemon-number {
+    color: #007bff;
+  }
+  
+  .pokemon-type {
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* Pokémon details */
+  .pokemon-details {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .pokemon-details h2 {
+    color: #007bff;
+  }
+  
+  .pokemon-details button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pokemon-details button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .pokemon-grid {
+      grid-template-columns: 1fr;
+    }
+  }
